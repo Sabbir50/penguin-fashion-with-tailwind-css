@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penguin Fashion</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        *{
+            color: #363958;
+        }
+        .font-roboto{
+            font-family: "Roboto", sans-serif;
+        }
+        .font-bebas{
+            font-family: "Bebas Neue", sans-serif;
+        }
+        .font-montserrat{
+            font-family: "Montserrat", sans-serif;
+        }
+        .sidebar{
+            padding-left: 30px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: 250px;
+            z-index: 999;
+            background-color: rgb(255, 255, 255);
+            box-shadow: -10px 0 10px rgb(0,0,0.0, 1);
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-[#FFFBF0]">
+        <nav class="container mx-auto pt-8 items-center flex max-sm:px-7 justify-between">
+            <div class="flex items-center gap-3">
+                <img class="w-10" src="images/logo.png" alt="">
+                <h1 class="text-2xl font-bold font-montserrat text-[#A4BC46]">Penguin <span class="text-[#363958]">Fashion</span></h1>
+            </div>
+
+            <ul class="flex gap-6 font-medium sidebar hidden">
+                <li class="mt-6" onclick="hidesidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" width="35"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li class="font-roboto"><a href="#">Home</a></li>
+                <li class="font-roboto"><a href="#">Product</a></li>
+                <li class="font-roboto"><a href="#">About us</a></li>
+                <li class="font-roboto"><a href="#">Contact us</a></li>
+            </ul>
+
+            <ul class="flex gap-6 font-medium items-center">
+                <li class="font-roboto max-md:hidden">
+                    <a href="#">Home</a>
+                </li>
+                <li class="font-roboto max-md:hidden">
+                    <a href="#">Product</a>
+                </li>
+                <li class="font-roboto max-md:hidden">
+                    <a href="#">About us</a>
+                </li>
+                <li class="font-roboto max-md:hidden">
+                    <a href="#">Contact us</a>
+                </li>
+                <li onclick="showSidebar()" class="menu md:hidden">
+                    <a href="#">
+                     <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" width="35"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+                     </a>
+                 </li>
+            </ul>
+        </nav>
+        <section class="max-md:flex-col flex justify-between items-center container md:mx-auto max-md:justify-center pb-32 max-sm:px-7 mt-20 ">
+            <div class="headline">
+                <h1 class="text-8xl font-black font-bebas "><span class="text-[#FABE4C]">Be the Penguins</span> <br>
+                    of Winter</h1>
+                    <p class="py-5">Lorem Ipsum is simply dummy text of the printing 
+                        and typesetting industry.</p>
+                        <button class="flex justify-center items-center gap-3 rounded-lg font-medium w-44 h-16 bg-gradient-to-b from-[#A4BC46] to-[#85A019] text-xl text-[#ffff]"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                          </svg>
+                          
+                          Buy Now</button>
+            </div>
+            <img class=" max-md:mt-8" src="images/model.png" alt="">
+        </section>
+    </header>
+
+
+
+
+
+    <script>
+        function showSidebar(){
+          const sidebar = document.querySelector('.sidebar')
+          sidebar .style .display = 'flex'
+        }
+        function hidesidebar(){
+            const sidebar = document.querySelector('.sidebar')
+          sidebar .style .display = 'none'
+        }
+    </script>
+
+
+</body>
+</html>
